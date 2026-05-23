@@ -145,9 +145,9 @@ pip install -r requirements.txt
 Create a `.env` file in the project root directory:
 
 ```env
-KAFKA_BOOTSTRAP_SERVERS=your_bootstrap_server
-KAFKA_API_KEY=your_api_key
-KAFKA_API_SECRET=your_api_secret
+KAFKA_BOOTSTRAP_SERVERS= bootstrap_server
+KAFKA_API_KEY= API_key
+KAFKA_API_SECRET= API_secret
 ```
 
 ## 5. Download Dataset
