@@ -171,6 +171,7 @@ This generates:
 ```text
 model/bike_model.pkl
 ```
+Note: The trained model file (`bike_model.pkl`) is excluded from GitHub because it exceeds GitHub's file size limit.
 
 ---
 
