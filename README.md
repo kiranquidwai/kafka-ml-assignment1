@@ -1,16 +1,16 @@
-# Real-Time Bike Rental Prediction Pipeline
+# Real-Time Streaming with Apache Kafka
 
-## ENGR 5785G — Assignment 1
+## Assignment 1
 
-This project demonstrates a real-time machine learning streaming pipeline using Apache Kafka, Confluent Cloud, Faust, and Python. The application streams bike rental data as live Kafka events, performs machine learning predictions in real time, and publishes prediction results to an output topic.
+In this project, I have used Apache Kafka, Confluent Cloud, Faust, and Python for real-time streaming. For which I have used bike rental data as live Kafka events, also performed machine learning predictions in real time, then published the predicted results to an output topic.
 
 ---
 
-# Dataset Chosen
+# Dataset:
 
 ## Bike Sharing Dataset
 
-Source:
+Link:
 https://archive.ics.uci.edu/dataset/275/bike+sharing+dataset
 
 File used:
@@ -19,7 +19,7 @@ File used:
 hour.csv
 ```
 
-The dataset contains hourly bike rental records with weather and seasonal information.
+This dataset has hourly bike rental records, also the weather and seasonal information.
 
 ### Features Used
 
@@ -42,7 +42,7 @@ The dataset contains hourly bike rental records with weather and seasonal inform
 cnt
 ```
 
-The machine learning task is to predict the hourly bike rental count.
+Here I have used machine learning to predict the hourly bike rental count.
 
 ---
 
@@ -54,12 +54,10 @@ This project uses the Faust Streams API with the `@app.agent` decorator.
 
 The Faust processor:
 
-1. Consumes live events from the Kafka `raw-data` topic
-2. Loads a pre-trained machine learning model
-3. Predicts bike rental demand in real time
-4. Sends prediction results to the Kafka `predictions` topic
-
-This satisfies the assignment requirement of using a dedicated Streams API instead of a plain consumer loop.
+1. Used live events from the Kafka `raw-data` topic
+2. Loaded a pre-trained machine learning model
+3. Predicted bike rental demand in real time
+4. Sent prediction results to the Kafka `predictions` topic
 
 ---
 
@@ -85,8 +83,6 @@ train_model.py
 ```
 
 and loaded inside the Faust stream processor during real-time execution.
-
-Note: Accuracy and F1 score are classification metrics and are not suitable for this regression problem.
 
 ---
 
