@@ -76,6 +76,8 @@ The Faust processor:
 * RMSE: 42.07
 * R² Score: 0.9441
 
+Note: As accuracy and F1 score are the classification metrics, as the dataset is for the regression problem, so I have used regression metrics.
+
 The model was trained offline in:
 
 ```text
